@@ -9,16 +9,27 @@ def main():
             break
         array = array + [user_input]
     print (array)
-    linear_search(array, int(input("Enter number to search\n")))
+    res = binary_search(array, int(input("Enter number to search\n")))
+    print(res)
 
-def linear_search(array, num):
-    pos  = 0
-    for x in array:
-        if x == num:
-            print(pos)
-            return
-        pos = pos + 1
-    print("Element not found")
+def binary_search(alist, item):
+    first = 0
+    last = len(alist) - 1
+    found = False
+    index = 0
+    while first <= last and not found:
+        midpoint = (first + last) // 2
+        if alist[midpoint] == item:
+            found = True
+            index = midpoint
+        else:
+            if item < alist[midpoint]:
+                last = midpoint - 1
+            else:
+                first = midpoint + 1
+    if found == True:
+        return  index
+    return "Element not found"
 
 if __name__ == '__main__':
     main()
