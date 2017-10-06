@@ -4,7 +4,7 @@ class MergeSort
     {
         int n1 = m - l + 1;
         int n2 = r - m;
- 
+
         int L[] = new int [n1];
         int R[] = new int [n2];
 
@@ -12,10 +12,10 @@ class MergeSort
             L[i] = arr[l + i];
         for (int j=0; j<n2; ++j)
             R[j] = arr[m + 1+ j];
- 
- 
+
+
         int i = 0, j = 0;
- 
+
         int k = l;
         while (i < n1 && j < n2)
         {
@@ -31,14 +31,14 @@ class MergeSort
             }
             k++;
         }
- 
+
         while (i < n1)
         {
             arr[k] = L[i];
             i++;
             k++;
         }
- 
+
         while (j < n2)
         {
             arr[k] = R[j];
@@ -52,10 +52,10 @@ class MergeSort
         if (l < r)
         {
             int m = (l+r)/2;
- 
+
             sort(arr, l, m);
             sort(arr , m+1, r);
- 
+
             merge(arr, l, m, r);
         }
     }
@@ -67,17 +67,17 @@ class MergeSort
             System.out.print(arr[i] + " ");
         System.out.println();
     }
- 
+
     public static void main(String args[])
     {
         int arr[] = {12, 11, 13, 5, 6, 7};
- 
-        System.out.println("Given Array");
+
+        System.out.println("Inputed Array");
         printArray(arr);
- 
+
         MergeSort ob = new MergeSort();
         ob.sort(arr, 0, arr.length-1);
- 
+
         System.out.println("\nSorted array");
         printArray(arr);
     }
