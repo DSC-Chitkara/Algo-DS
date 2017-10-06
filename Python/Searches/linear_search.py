@@ -9,9 +9,9 @@ def main():
             break
         array = array + [user_input]
     print (array)
-    binary_search(array, int(input("Enter number to search\n")))
+    linear_search(array, int(input("Enter number to search\n")))
 
-def binary_search(array, num):
+def linear_search(array, num):
     pos  = 0
     for x in array:
         if x == num:
