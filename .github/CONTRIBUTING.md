@@ -27,4 +27,4 @@ These are some general rules so everyone can contribute with no conflicts of any
 - If an issue is claimed by another contributor, please wait for atleast 10 days before asking claim for the issue.
 - For a new Issue, make sure that you add in a good level detail for the algorithm/Data Structure you are implementing.
 - Each code snippet is to contain some testing inputs to make sure that your code works well and specify where it fails.
-- _Developing...
+- _Developing..._
