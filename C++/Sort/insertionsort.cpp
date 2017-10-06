@@ -36,9 +36,13 @@ class insertionsort
 	}
 };
 int main()
-{
+{s
 	insertionsort s;
 	s.array();
 	s.insertion();
 	s.display();
 }
+
+//Test Cases
+// if arr[5]={8,5,1,0,7} then insertion sorted array will be arr[5]={0,1,5,7,8}
+// if arr[5]={9,3,4,5,6} then insertion sorted array will be arr[5]={3,4,5,6,9}
