@@ -37,9 +37,7 @@ while 1:
 	if num!=1 and num!=2:
 
 		total_set_bits = count_ones(num) #since sum of set bits is equivalent to counting those bits 
-		print total_set_bits
 		flag=isprime(total_set_bits)
-		print flag
 		if flag==1:
 			print "yes\n"
 		else:
