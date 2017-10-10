@@ -20,7 +20,7 @@ def binary(num):#thisfunction coverts decimalnumber into its binary equivalent f
 
 	return binary
 
-def ones(binary): #this function would calculates all set bits in binary number
+def ones(binary): #this function would calculates sum of all set bits in binary number
 	count=0
 	while binary!=0:
 		if binary%10==1:
