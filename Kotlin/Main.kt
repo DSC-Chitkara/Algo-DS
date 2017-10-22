@@ -1,4 +1,5 @@
 import Sort.InsertionSort
+import Sort.MergeSort
 import Sort.QuickSort
 import Sort.ShellSort
 import java.util.*
@@ -45,10 +46,25 @@ fun shellsort(sortableNumbers : List<Int>, sortableString : List<Char>) {
 
 }
 
+fun mergesort(sortableNumbers : List<Int>, sortableString : List<Char>) {
+    val sortingNumbersTime = measureTimeMillis {
+        MergeSort.sort(sortableNumbers)
+    }
+    val sortingStringTime = measureTimeMillis {
+        MergeSort.sort(sortableString)
+    }
+    println("MergeSort numbers (" + sortingNumbersTime + "ms)")
+    println("MergeSort strings (" + sortingStringTime + "ms)")
+    assert(MergeSort.sort(sortableNumbers) == sortableNumbers.sorted())
+    assert(MergeSort.sort(sortableString) == sortableString.sorted())
+
+}
+
 fun main(args: Array<String>) {
     val sortableNumbers = List(1500) { Random().nextInt(Int.MAX_VALUE)}
     val sortableString  = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".toList()
     quicksort(sortableNumbers, sortableString)
+    mergesort(sortableNumbers, sortableString)
     shellsort(sortableNumbers, sortableString)
     insertionsort(sortableNumbers, sortableString)
 
