@@ -40,7 +40,7 @@ int main() {
 			tempNode = tempNode -> next ;
 		}
 
-		tempNode -> next=newn;
+		tempNode -> next = newNode;
 	}
 	
 	cout << "\n PRINTED THE ENTERED VALUES : " ;
