@@ -4,7 +4,7 @@
 # 2 Contributor : Name : Jai Kathuria 
                   Github : jaikathuria
                   
-# 3 contributor : Name : Ravi Kant Garg 
+# 3 Contributor : Name : Ravi Kant Garg 
                   Github : garg-ravi24
                   
 # 4 Contributor : Name : Sumit Gupta 
@@ -18,3 +18,7 @@
                   
 # 7 Contributor : Name : Harshit Luthra 
                   Github : sachincool
+
+# 8 Contributor : Name : Deepti Sharma
+                  Github : deezzu
+                  
