@@ -40,7 +40,7 @@ var mergesort = function (array,  cmp) {
         msort(begin_right, end);
         merge(begin, begin_right, end);
     }
-
+//
     msort(0, array.length);
 
     return array;
