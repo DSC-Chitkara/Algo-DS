@@ -1,50 +1,78 @@
 #include<iostream>
 using namespace std;
-struct node
-{
+
+
+struct node {
+	
 int info;
-node *next;	
+node *next;
+	
 };
-main()
-{
-	int n,i;
-	node *temp,*t,*start=NULL,*newn,*current,*nextn=NULL,*prev=NULL;
-	while(start==NULL)
-	{
-		start=new node;
-		cin>>start->info;
-		start->next=NULL;
+
+int main() {
+	
+	int i, linkLength ;
+	node *head = NULL;
+	node *newNode, *tempNode, *prev, *nextNode;
+	prev=NULL;
+	
+	cout << " \n Enter the number of values in the list : " ;
+	cin >> linkLength ;
+	
+	cout << "\n Enter Values for the List : " ;
+	
+	while ( head == NULL ) {
+
+		head = new node ;
+		cin >> head -> info ;
+		head -> next = NULL;
 	}
-	cin>>n;
-	for(i=0;i<n;i++)
-	{
-		newn=new node;
-		cin>>newn->info;
-		newn->next=NULL;
-		t=start;
-		while(t->next!=NULL)
-        t=t->next;
-        t->next=newn;
+	
+	for ( i = 0 ;i < linkLength-1 ; i++ ) {
+		
+		newNode=new node;
+		cin >> newNode -> info ;
+		newNode -> next = NULL ;
+		
+		tempNode = head;
+		while ( tempNode -> next != NULL ){
+	
+			tempNode = tempNode -> next ;
+		}
+
+		tempNode -> next = newNode;
 	}
-	t=start;
-	while(t!=NULL)
-{   cout<<"Before Insertion";
-	cout<<t->info<<" ";
-	t=t->next;
-}
-	current=start;
-	while(current!=NULL)
-	{
-		nextn=current->next;
-		current->next=prev;
-		prev=current;
-		current=nextn;
+	
+	cout << "\n PRINTED THE ENTERED VALUES : " ;
+	tempNode = head ;
+	while ( tempNode != NULL ) {
+
+		cout << tempNode -> info << " " ;
+		tempNode = tempNode->next;
 	}
-	start=prev;
-	t=start;
-	while(t!=NULL)
-{
-	cout<<t->info;
-	t=t->next;
-}
+
+	//REVERSING THE LIST 
+	
+	tempNode = head ;
+	while ( tempNode != NULL ) {
+		
+		nextNode = tempNode -> next ;
+		tempNode -> next = prev ;
+		prev = tempNode ;
+		tempNode = nextNode ;
+	}
+	
+	//Reinitializing the head...
+	head = prev ;
+	
+	cout << " \n Printing the Reversed list ... " ;
+	
+	tempNode = head ;
+	while ( tempNode != NULL ) {
+		
+	cout << tempNode->info ;
+	tempNode = tempNode->next ;
+	}
+	
+	return 0;
 }
