@@ -1,0 +1,11 @@
+array = [ 45, 9, -9, 0 , 3.33, -67, 21]
+
+def linearSearch(array, n): # n is the target you are looking for
+  for i in range(len(array)):
+    if array[i] == n:
+      return i
+  return -1
+  
+
+# test
+print(linearSearch(array, -67)) # expected output is 5
