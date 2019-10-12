@@ -17,15 +17,14 @@ int main() {
 //function body
 
 int fabonacci(int M) {
-    int a=0,b=1,i,c;
-    printf("Fabonacci series is:\n%d\n%d",a,b);
+    int *list = (int*)malloc((M+1)*sizeof(int));
+    list[0] = 0;
+    list[1] = 1;
+    printf("Fabonacci series is:\n%d\n%d",list[0], list[1]);
     //for loop to find all fabonnaci number
-    for (i=0;i<M-2;i++) {
-        c=a+b;//fabonacci series is addition of previous two numbers
-        a=b;
-        b=c;
-        printf("\n%d",c);
+    for (i=2;i<M;i++) {
+      list[i] = list[i-1] + list[i-2];
+      printf("\n%d", list[i]);
     }
     return 0;
 }
-
