@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 #include<math.h>
 
 void todecimal()
@@ -55,4 +56,5 @@ void main()
     }
     else
         printf("Y enter wrong option");
+    getch();	
 }
