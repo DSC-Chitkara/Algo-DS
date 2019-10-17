@@ -1,7 +1,8 @@
 #include<stdio.h>
+#include<conio.h>
 #include<math.h>
 
-int main()
+void main()
 {
 	long int num,i=0,decimal=0,rem;
 	
@@ -16,5 +17,5 @@ int main()
 		i++;
 	}
 	printf("The decimal equivalent is %ld",decimal);
-	return 0;
+	getch();
 }
