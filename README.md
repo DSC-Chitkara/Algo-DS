@@ -32,6 +32,6 @@ Please Read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for instructions
 - Add a new Language to the root directory.
 - Each Code snippet must be in the appropriate sub-directory.
 
-### Got any Questions?
+### Got any Questions please ask?
 
 Make an issue! We'll reply as soon as we can!
