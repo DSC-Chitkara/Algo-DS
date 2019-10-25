@@ -1,55 +1,66 @@
 #include<iostream>
 using namespace std;
+#define maxSize 100;
+
 int main()
-{
-    int n,a[100],x,mid=0,s=0,e=0;
-    cout<<"Enter size of array: ";
-    cin>>n;
-    cout<<"Enter elements of array: \n";
-    for(int i=0; i<n; i++)
-    {
-        cin>>a[i];
+
+    int arr[maxSize] , element , mid , start , end ;
+    int arrSize , i , j , temp ;
+    mid = start = end = 0;
+    
+    cout << " \n Enter size of array : " ;
+    cin >> arrSize ;
+    
+    cout << " \n Enter elements of array: " ;
+    for ( i = 0 ; i < n ; i++ ){
+
+        cin >> arr[i] ;
     }
-    for(int i=0; i<n; i++)
-    {
-        for(int j=0; j<n-i; j++)
-        {
-            if(a[j]>a[j+1])
-            {
-                int temp = a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
+    
+    // SORTING ARRAY 
+    for ( i = 0 ; i < arrSize ; i++ ) {
+ 
+        for ( j = 0 ; j < arrSize-i ; j++) {
+
+            if ( arr[ j ] > arr[ j+1 ] ) {
+                
+                temp = arr[ j ] ;
+                arr[ j ] = arr[ j+1 ];
+                arr[ j+1 ] = temp;
             }
         }
     }
-    cout<<"Sorted array: "<<endl;
-    for(int i=0; i<n; i++)
-    {
-        cout<<a[i]<<" "<<endl;
+
+    cout << " \n Sorted array : " << endl ;
+    
+    for ( i = 0 ; i < arrSize ; i++ ) {
+  
+        cout << arr[ i ] << " " << endl ;
     }
-    e = n-1;
-    cout<<"Enter a no to search: ";
-    cin>>x;
-    mid = (s+e)/2;
-    while(s<e && a[mid]!=x)
-    {
-        if(x>a[mid])
-        {
-            s = mid+1;
+
+    end  = arrSize-1 ;
+
+    cout << " \n Enter an element to be searched : " ;
+    cin >> element ;
+
+    mid = ( start + end ) / 2 ;
+
+    while ( start < end  &&  arr[ mid ] ! = element ) {
+        if ( element > arr[ mid ] ) {
+            start = mid+1;
         }
-        else
-        {
-            e = mid-1;
+        else {
+            end = mid - 1 ;
         }
-        mid = (s+e)/2;
+        mid = ( start + end ) / 2 ;
     }
-    if(a[mid] == x)
-    {
-        cout<<"Element "<<a[mid]<<" found at "<<mid+1<<" position"<<endl;
+
+    if ( arr[ mid ] == element ) {
+        cout << " \n Element " << arr[ mid ] << " found at " << mid+1 << " position " << endl ;
     }
-    else
-    {
-        cout<<"Element not found"<<endl;
+    else {
+        cout << " \n Element not found " << endl ;
     }
-    return 0;
+ 
+     return 0;
 }
